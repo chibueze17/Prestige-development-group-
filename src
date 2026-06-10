@@ -1,7 +1,7 @@
 src/routes/sitemap[.]xml.ts
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-const BASE_URL = "";
+const BASE_URL = "https://prestige-development-group.vercel.app";
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
