@@ -180,11 +180,58 @@ footer {
   background: #000;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
-  .grid, .projects {
-    grid-template-columns: 1fr;
+
+  .nav {
+    padding: 15px 20px;
   }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 12px 0;
+  }
+
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
 
   .nav {
     flex-direction: column;
