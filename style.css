@@ -179,7 +179,7 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 200px) {
+@media (max-width: 768px) {
   .grid, .projects {
     grid-template-columns: 1fr;
   }
