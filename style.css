@@ -43,9 +43,11 @@ nav a {
   font-size: 26px;
 }
 
-/* HERO */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 120px 20px;
+}
   background: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115') center/cover;
   display: flex;
   align-items: center;
