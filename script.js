@@ -1,17 +1,3 @@
 function toggleMenu() {
-  const nav = document.getElementById("navMenu");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  document.getElementById("navMenu").classList.toggle("active");
 }
-
-// Smooth fade-in animation on scroll
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", () => {
-  cards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      card.style.opacity = 1;
-      card.style.transform = "translateY(0)";
-    }
-  });
-});
