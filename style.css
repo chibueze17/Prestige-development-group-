@@ -1,20 +1,21 @@
-/* =========================
+/* ===================================
    PRESTIGE DEVELOPMENTS GROUP
-   LUXURY REAL ESTATE CSS
-========================= */
+   LUXURY REAL ESTATE WEBSITE
+=================================== */
 
 :root{
   --black:#0A0A0A;
   --charcoal:#151515;
   --gold:#C8A45D;
   --white:#FFFFFF;
-  --gray:#A5A5A5;
-  --light:#F7F7F7;
+  --gray:#B8B8B8;
 
   --container:1200px;
   --radius:18px;
-  --transition:.35s ease;
+  --transition:0.35s ease;
 }
+
+/* RESET */
 
 *{
   margin:0;
@@ -36,26 +37,19 @@ body{
 
 img{
   width:100%;
-  max-width:100%;
   display:block;
-  height:auto;
+  max-width:100%;
 }
 
-.container{
-  width:min(var(--container),90%);
-  margin:auto;
-}
-
-/* =========================
-   NAVBAR
-========================= */
+/* ===================
+   NAVIGATION
+=================== */
 
 .nav{
   position:fixed;
   top:0;
   left:0;
   width:100%;
-  z-index:1000;
 
   display:flex;
   justify-content:space-between;
@@ -63,8 +57,10 @@ img{
 
   padding:20px 5%;
 
-  background:rgba(10,10,10,.75);
-  backdrop-filter:blur(12px);
+  background:rgba(10,10,10,.85);
+  backdrop-filter:blur(10px);
+
+  z-index:1000;
 }
 
 .logo{
@@ -82,8 +78,8 @@ nav{
 }
 
 nav a{
-  color:white;
   text-decoration:none;
+  color:white;
   font-weight:500;
   transition:var(--transition);
 }
@@ -94,17 +90,17 @@ nav a:hover{
 
 .menu-btn{
   display:none;
-  color:white;
-  font-size:28px;
+  font-size:30px;
   cursor:pointer;
 }
 
-/* =========================
+/* ===================
    HERO
-========================= */
+=================== */
 
 .hero{
   min-height:100vh;
+
   display:flex;
   align-items:center;
   justify-content:center;
@@ -115,8 +111,8 @@ nav a:hover{
 
   background:
   linear-gradient(
-  rgba(0,0,0,.55),
-  rgba(0,0,0,.65)
+    rgba(0,0,0,.60),
+    rgba(0,0,0,.70)
   ),
   url("https://images.unsplash.com/photo-1600585152220-90363fe7e115")
   center center/cover no-repeat;
@@ -126,37 +122,49 @@ nav a:hover{
   max-width:900px;
 }
 
+.hero-tag{
+  color:var(--gold);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:.9rem;
+}
+
 .hero h1{
   font-family:'Playfair Display',serif;
   font-size:clamp(3rem,7vw,6rem);
   line-height:1.05;
-  margin-bottom:25px;
+  margin:20px 0;
 }
 
 .hero p{
   max-width:700px;
   margin:auto;
-  color:#d7d7d7;
-  font-size:1.1rem;
+  color:#d5d5d5;
 }
 
 .hero-buttons{
   margin-top:40px;
+
   display:flex;
   justify-content:center;
   gap:15px;
   flex-wrap:wrap;
 }
 
-/* =========================
+/* ===================
    BUTTONS
-========================= */
+=================== */
 
 .btn{
-  padding:14px 28px;
-  border-radius:50px;
+  display:inline-block;
   text-decoration:none;
+
+  padding:14px 30px;
+
+  border-radius:50px;
+
   transition:var(--transition);
+
   font-weight:600;
 }
 
@@ -179,58 +187,105 @@ nav a:hover{
   color:black;
 }
 
-/* =========================
+/* ===================
    STATS
-========================= */
+=================== */
 
 .stats{
-  background:#000;
-  padding:50px 5%;
+  padding:60px 5%;
 
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:20px;
 
-  text-align:center;
+  background:black;
 }
 
 .stats div{
   background:var(--charcoal);
-  padding:25px;
+
+  padding:30px;
   border-radius:var(--radius);
 
-  color:var(--gold);
-  font-weight:600;
+  text-align:center;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+.stats h3{
+  color:var(--gold);
+  font-size:2rem;
+}
+
+.stats p{
+  color:var(--gray);
+}
+
+/* ===================
+   GENERAL SECTION
+=================== */
 
 .section{
-  padding:100px 5%;
+  padding:120px 5%;
 }
 
 .section h2{
   text-align:center;
-  margin-bottom:50px;
+
+  margin-bottom:60px;
+
+  font-size:clamp(2rem,4vw,3rem);
 
   font-family:'Playfair Display',serif;
-  font-size:clamp(2rem,4vw,3rem);
 }
 
 .dark{
   background:#111;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* ===================
+   FEATURED SECTION
+=================== */
+
+.featured{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.featured-image img{
+  border-radius:20px;
+  aspect-ratio:16/10;
+  object-fit:cover;
+}
+
+.section-tag{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.featured-content h2{
+  text-align:left;
+  margin:20px 0;
+}
+
+.featured-content ul{
+  margin:25px 0;
+}
+
+.featured-content li{
+  list-style:none;
+  margin-bottom:10px;
+}
+
+/* ===================
+   GRID
+=================== */
 
 .grid{
   display:grid;
   grid-template-columns:
-  repeat(auto-fit,minmax(280px,1fr));
+  repeat(auto-fit,minmax(260px,1fr));
 
   gap:25px;
 }
@@ -238,9 +293,9 @@ nav a:hover{
 .card{
   background:var(--charcoal);
 
-  padding:30px;
+  border-radius:18px;
 
-  border-radius:var(--radius);
+  padding:30px;
 
   transition:var(--transition);
 
@@ -252,63 +307,76 @@ nav a:hover{
   border-color:var(--gold);
 }
 
-.card strong{
-  color:var(--gold);
-}
-
-/* =========================
+/* ===================
    PROJECTS
-========================= */
+=================== */
 
 .projects{
   display:grid;
 
   grid-template-columns:
-  repeat(auto-fit,minmax(340px,1fr));
+  repeat(auto-fit,minmax(320px,1fr));
 
   gap:30px;
 }
 
 .project{
   background:var(--charcoal);
+  border-radius:20px;
   overflow:hidden;
-  border-radius:var(--radius);
 }
 
 .project img{
   aspect-ratio:16/10;
   object-fit:cover;
-
   transition:.8s ease;
 }
 
 .project:hover img{
-  transform:scale(1.06);
+  transform:scale(1.08);
 }
 
-.project h3{
-  padding:20px 20px 5px;
+.project-body{
+  padding:25px;
 }
 
-.project p{
-  padding:0 20px 20px;
-  color:#bdbdbd;
-}
+/* ===================
+   INVESTOR SECTION
+=================== */
 
-/* =========================
-   ABOUT
-========================= */
+.investor{
+  position:relative;
 
-.about-text{
-  max-width:850px;
-  margin:0 auto 50px;
+  padding:140px 5%;
+
   text-align:center;
-  color:#d0d0d0;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.75)
+  ),
+  url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab")
+  center center/cover no-repeat;
 }
 
-/* =========================
+.investor-content{
+  max-width:800px;
+  margin:auto;
+}
+
+.investor h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,5vw,4rem);
+}
+
+.investor p{
+  margin:20px 0 30px;
+}
+
+/* ===================
    CONTACT
-========================= */
+=================== */
 
 .contact{
   display:grid;
@@ -325,9 +393,10 @@ form{
 input,
 textarea{
   background:#171717;
-  border:1px solid #2b2b2b;
+  border:1px solid #2d2d2d;
 
   padding:16px;
+
   border-radius:10px;
 
   color:white;
@@ -335,50 +404,78 @@ textarea{
 
 textarea{
   min-height:180px;
+  resize:none;
 }
 
 .contact-info{
   background:var(--charcoal);
   padding:30px;
-  border-radius:var(--radius);
+  border-radius:18px;
 }
 
 .contact-info p{
   margin-bottom:15px;
 }
 
-/* =========================
+/* ===================
+   CTA SECTION
+=================== */
+
+.cta-section{
+  text-align:center;
+
+  padding:140px 5%;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,.70),
+    rgba(0,0,0,.70)
+  ),
+  url("https://images.unsplash.com/photo-1600047509782-20d39509f26d")
+  center center/cover no-repeat;
+}
+
+.cta-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,5vw,4rem);
+}
+
+.cta-section p{
+  margin:20px 0 30px;
+}
+
+/* ===================
    FOOTER
-========================= */
+=================== */
 
 footer{
   text-align:center;
   padding:30px;
   background:black;
-  color:#9d9d9d;
+  color:var(--gray);
 }
 
-/* =========================
+/* ===================
    RESPONSIVE
-========================= */
+=================== */
 
 @media(max-width:991px){
 
-  .stats{
-    grid-template-columns:repeat(2,1fr);
+  .featured{
+    grid-template-columns:1fr;
   }
 
   .contact{
     grid-template-columns:1fr;
   }
 
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
 }
 
 @media(max-width:768px){
-
-  .nav{
-    padding:18px 20px;
-  }
 
   nav{
     display:none;
@@ -392,7 +489,6 @@ footer{
     background:#111;
 
     flex-direction:column;
-    gap:20px;
 
     padding:25px;
   }
@@ -403,10 +499,6 @@ footer{
 
   .menu-btn{
     display:block;
-  }
-
-  .hero{
-    min-height:90vh;
   }
 
   .hero-buttons{
@@ -421,7 +513,7 @@ footer{
   }
 
   .section{
-    padding:80px 20px;
+    padding:90px 20px;
   }
 
 }
@@ -429,10 +521,6 @@ footer{
 @media(max-width:600px){
 
   .stats{
-    grid-template-columns:1fr;
-  }
-
-  .projects{
     grid-template-columns:1fr;
   }
 
